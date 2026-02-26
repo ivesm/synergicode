@@ -14,7 +14,6 @@ class UserController extends Controller
     public function store(Request $request)
     {
         try{
-
             //Validatating the  Data
             $validated = $request->validate([
                 'name' => ['required', 'string', 'max:255'],
@@ -29,14 +28,13 @@ class UserController extends Controller
         } catch (QueryException $e) {
 
             // Some error handling
-
             if ($e->getCode() == 23000) {
                 //Duplicate Email
                 return redirect()->route('error.page')
                     ->with('error', 'Email address already exists.');
             }
 
-            //Somethin catestrophic went wrong
+            //Something catestrophic went wrong
             return redirect()->route('error.page')
                 ->with('error', 'Something went wrong.');
             }
