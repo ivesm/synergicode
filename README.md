@@ -83,3 +83,5 @@ Instructions - Assesement  for Synergy Code
 
 - run php artisan test  , this  will run the feature test 
 
+- complete user testing , with various test Scenarios.
+
