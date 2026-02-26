@@ -17,7 +17,7 @@
                             {{ session('message') }}
                         </div>
                     @endif
-                    <h3>Thank you! Your action was successful.</h3>
+                    <h3>Thank you!</h3>
                     <p>
                         <a href="/">Go to User Page</a>
                     </p>   

@@ -25,7 +25,7 @@ class UserController extends Controller
             //Commiting to the  db
             User::create($validated);
 
-           return redirect()->route('confirmation.page')->with('message', 'Action completed successfully!');
+           return redirect()->route('confirmation.page')->with('message', 'User has been successfully added!' );
         } catch (QueryException $e) {
 
             // Some error handling
