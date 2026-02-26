@@ -31,10 +31,9 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_DATABASE: laravel
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_USER: laravel
-      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: kickstart
+      MYSQL_USER: root
+      MYSQL_PASSWORD: kickstart
     volumes:
       - dbdata:/var/lib/mysql
     networks:

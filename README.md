@@ -92,22 +92,26 @@ Validation criteria - The following validation Criteria has been introduced in t
 <h1><strong>Runnig Code :  <strong></h1>  
 
 <p>
-    - Make sure that  Mysql is up and running and that the databases  have been created 
-    - Make Sure the Migrations  have bee run 
+    - Bare basics
+        - Make sure that  Mysql is up and running and that the databases  have been created 
+        - Make Sure the Migrations  have bee run 
         - php artisan migrate
-
-    - Runnig 
         - php artisan serve 
         - in a browser navigate to http://127.0.0.1:8000 
         - alternatively create a Docker Container 
         - or Vm  machine  with a configured Environment ( Apache / php / laravel / mysql)
         - this environment can also be configured  on you  local machine
         - once you  have navigated to http://127.0.0.1:8000  you can start testing 
+    - Docker 
+    
+    
 </p>
 
 <h1><strong>Additional features :  <strong></h1>  
 <p>
   The only additional feature is the addition  of an Error Page, this is to cater for error Messeges begin display separately  for the confirmation messages.
+
+  From a environment perspective I have  used Docker run the site 
 
   <strong> NOTE </strong>
   given the nature  of the assesment I found it unnesasary to add any additional functionality. additionally I have opted to not implement any additional javascript frameworks such as react/vue or  any other CSS frame works such as tailwind

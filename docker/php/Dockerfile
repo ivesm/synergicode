@@ -17,8 +17,6 @@ COPY . .
 
 
 RUN composer install
-RUN npm install
-RUN npm run build
 
 
 RUN chown -R www-data:www-data /var/www/html

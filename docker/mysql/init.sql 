@@ -1,0 +1,6 @@
+CREATE DATABASE IF NOT EXISTS synergicode;
+CREATE DATABASE IF NOT EXISTS synergicode_test;
+
+GRANT ALL PRIVILEGES ON synergicode.* TO 'root'@'%';
+GRANT ALL PRIVILEGES ON synergicode_test.* TO 'root'@'%';
+FLUSH PRIVILEGES;
