@@ -64,12 +64,12 @@ class UserControllerTest extends TestCase
         $response->assertSessionHasErrors('email');
     }
 
-     public function test_comments_can_be_null()
+     public function comments_cannot_be_null()
     {
         $response = $this->post(route('user.store'), [
             'name' => 'John Doe',
             'email' => 'john@example.com',
-            'additionalcomments' => null,
+            
         ]);
 
         $response->assertSessionHasErrors('additionalcomments');
@@ -85,5 +85,20 @@ class UserControllerTest extends TestCase
 
         $response->assertSessionHasErrors('additionalcomments');
     }
+
+
+    public function test_user_can_submit_form()
+    {
+        $response = $this->post(route('user.store'), [
+            'name' => 'John',
+            'email' => 'john@example.com',
+        ]);
+
+        $response->assertRedirect();
+        $this->assertDatabaseHas('users', [
+            'email' => 'john@example.com'
+        ]);
+    }
+
 
 }
