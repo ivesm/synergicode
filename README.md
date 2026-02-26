@@ -3,10 +3,48 @@ Instructions - Assesement  for Synergy Code
 <h1><strong>Project Overview <strong></h1>  
 
 <p> This code base is aimed  at testing a canidates laravel skills, the Canidate is required to complete the assesment as efficiently as possible.
+
+The Form has 3 fields name , email and additionl comments. Basic premis is that when the submit button  is  clicked  the record will be written to the database ,  assuming all validation criteria is met . 
+
+Once the criteria has been met the data will be commited to the database and the user will be redirected to a succes page,  assuming nothing  goes wrong.  If Something goes wrong a error page will be displayed . 
+
 </p>
 
 <h1><strong>Technical Details: <strong></h1>  
+Database  Mysql  is used  for the database en
+    a database called synergicode is created ,  having a table called users
+    
+    +-------------------+-----------------+------+-----+---------+----------------+
+    | Field             | Type            | Null | Key | Default | Extra          |
+    +-------------------+-----------------+------+-----+---------+----------------+
+    | id                | bigint unsigned | NO   | PRI | NULL    | auto_increment |
+    | name              | varchar(255)    | NO   |     | NULL    |                |
+    | email             | varchar(255)    | NO   | UNI | NULL    |                |
+    | additionalcomment | varchar(255)    | YES  |     | NULL    |                |
+    | created_at        | timestamp       | YES  |     | NULL    |                |
+    | updated_at        | timestamp       | YES  |     | NULL    |                |
+    +-------------------+-----------------+------+-----+---------+----------------+
 
+Users model 
+    The Standard Laravel  users model has been ammended  to  accomodate the new table structure . 
+
+The Standard laravel users migration file has also been amened to take the database changes into account.
+
+a Model-View-Controller (MVC) architectural pattern  has been  Followed,  using standard laravel blade templating  to render the  views.
+
+Model - app/Models/User.php
+View  - resources/views/user.blade.php
+Controler - app/Http/Controllers/UserController.php
+
+For more information About  MVC architecture Please  refer to laravel documents, 
+https://laravel.com/learn/getting-started-with-laravel/what-is-mvc
+
+<strong>Validation criteria<strong>  
+The following validation Criteria  has been introduced in the controler 
+
+    - The name has to be a valid String no longer than 255 Characters.
+    - the Email has to be a valid  Email ,  and has to be unique  and also no longer than 255 chracters. 
+    - The additional Comments has to be a valid string no longer than 255 Characters.
 
 <p> 
     Which ever Environment you  Choose  make sure that you  have Mysql  installed
