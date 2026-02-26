@@ -41,9 +41,11 @@ Instructions - Assesement  for Synergy Code
     - Once done make sure to  update the .env file  with the  created user name  and password under the #DB  Config  section
     -run the Following  command  to  create the Database tables
      php artisan migrate
+
     - Login into  Mysql  to make sure the tables  have been created 
-
-
+    
+    - Only unique Emails are allowed 
+    
 <h1><strong>Runnig Code :  <strong></h1>  
 
 <h1><strong>Additional features :  <strong></h1>  
