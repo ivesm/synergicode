@@ -25,7 +25,7 @@ class UserControllerTest extends TestCase
         $response = $this->post(route('user.store'), [
             'name' => 'John Doe',
             'email' => 'john@example.com',
-            'comments' => 'Test comment',
+            'additionalcomment' => 'Test comment',
         ]);
 
         $response->assertRedirect(route('confirmation.page'));
@@ -72,7 +72,7 @@ class UserControllerTest extends TestCase
             
         ]);
 
-        $response->assertSessionHasErrors('additionalcomments');
+        $response->assertSessionHasErrors('additionalcomment');
     }
 
     public function comments_must_be_string()
@@ -80,14 +80,14 @@ class UserControllerTest extends TestCase
         $response = $this->post(route('user.store'), [
             'name' => 'John Doe',
             'email' => 'john@example.com',
-            'additionalcomments' => ['not', 'a', 'string'],
+            'additionalcomment' => ['not', 'a', 'string'],
         ]);
 
-        $response->assertSessionHasErrors('additionalcomments');
+        $response->assertSessionHasErrors('additionalcomment');
     }
 
 
-    public function test_user_can_submit_form()
+    public function user_can_submit_form()
     {
         $response = $this->post(route('user.store'), [
             'name' => 'John',
