@@ -114,16 +114,19 @@ Validation criteria - The following validation Criteria has been introduced in t
 <p>
     - Bare basics
         - Make sure that  Mysql is up and running and that the databases  have been created 
+        - make Sure  the Correct version of php is installed
+        - make sure laravel and composer is installed 
         - Make Sure the Migrations  have bee run 
         - php artisan migrate
         - php artisan serve 
         - in a browser navigate to http://127.0.0.1:8000 
-        - alternatively create a Docker Container 
-        - or Vm  machine  with a configured Environment ( Apache / php / laravel / mysql)
-        - this environment can also be configured  on you  local machine
-        - once you  have navigated to http://127.0.0.1:8000  you can start testing 
-    - Docker 
+        
+    - alternatively create a Docker Container 
+    - or Vm  machine  with a configured Environment ( Apache / php / laravel / mysql)
+    - this environment can also be configured  on you  local machine
+    - once you  have navigated to http://127.0.0.1:8000  you can start testing 
 
+    - Docker 
         -  git config --global --add safe.directory /var/www/html
         - ./start.sh  
         - navigate to http://localhost:8000  to access the Web page 
@@ -141,7 +144,6 @@ Validation criteria - The following validation Criteria has been introduced in t
   <strong> NOTE </strong>
   given the nature  of the assesment I found it unnesasary to add any additional functionality. additionally I have opted to not implement any additional javascript frameworks such as react/vue or  any other CSS frame works such as tailwind
 
-  
  <p>
 
 <h1><strong>Testing :  <strong></h1>  
@@ -149,7 +151,10 @@ Validation criteria - The following validation Criteria has been introduced in t
  php artisan db:seed --class=TestDataSeeder --env=testing
 
 
-- run php artisan test  , this  will run the feature test 
+- run php artisan test  , this  will run the feature test ( assuming you are running in bare basics  mode as described above) ELSE  if running in docker 
+
+docker compose exec app php artisan test
+-
 
 - complete user testing , with various test Scenarios.
 
