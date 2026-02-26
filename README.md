@@ -82,9 +82,6 @@ Docker -  if  you  are running the application  in the  Docker  Container the  F
     for more  indepth Docker Commands  you  can refer to the following 
     https://docs.docker.com/get-started/docker_cheatsheet.pdf
 
-    
-
-
 </p>
 
 <p>
@@ -127,6 +124,11 @@ Validation criteria - The following validation Criteria has been introduced in t
         - once you  have navigated to http://127.0.0.1:8000  you can start testing 
     - Docker 
 
+        -  git config --global --add safe.directory /var/www/html
+        - ./start.sh  
+        - navigate to http://localhost:8000  to access the Web page 
+        - if you  wish to  Stop the service  run , docker compose down 
+        - if you want to restart the Container run docker compose up 
     
 </p>
 
