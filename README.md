@@ -11,8 +11,9 @@ Once the criteria has been met the data will be commited to the database and the
 </p>
 
 <h1><strong>Technical Details: <strong></h1>  
-Database  Mysql  is used  for the database en
-    a database called synergicode is created ,  having a table called users
+
+<p>
+Database:  Mysql  is used  for the database a database called synergicode is created ,  having a table called users
     
     +-------------------+-----------------+------+-----+---------+----------------+
     | Field             | Type            | Null | Key | Default | Extra          |
@@ -24,36 +25,6 @@ Database  Mysql  is used  for the database en
     | created_at        | timestamp       | YES  |     | NULL    |                |
     | updated_at        | timestamp       | YES  |     | NULL    |                |
     +-------------------+-----------------+------+-----+---------+----------------+
-
-Users model 
-    The Standard Laravel  users model has been ammended  to  accomodate the new table structure . 
-
-The Standard laravel users migration file has also been amened to take the database changes into account.
-
-a Model-View-Controller (MVC) architectural pattern  has been  Followed,  using standard laravel blade templating  to render the  views.
-
-Model - app/Models/User.php
-View  - resources/views/user.blade.php
-Controler - app/Http/Controllers/UserController.php
-
-For more information About  MVC architecture Please  refer to laravel documents, 
-https://laravel.com/learn/getting-started-with-laravel/what-is-mvc
-
-<strong>Validation criteria<strong>  
-The following validation Criteria  has been introduced in the controler 
-
-    - The name has to be a valid String no longer than 255 Characters.
-    - the Email has to be a valid  Email ,  and has to be unique  and also no longer than 255 chracters. 
-    - The additional Comments has to be a valid string no longer than 255 Characters.
-
-<p> 
-    Which ever Environment you  Choose  make sure that you  have Mysql  installed
-    and  make  Sure that the chosen  user  has the appropirate rights to the DB
-
-    Instructions  for creating  the Database ( It is assumed  that you are fimilar with Mysql and have acces to a user  with appropriate user rights , else please refur to your administrator) below
-
-</p>
-
 
     - mysql -u root -p
     -   CREATE DATABASE synergicode
@@ -91,10 +62,31 @@ The following validation Criteria  has been introduced in the controler
      php artisan migrate
 
     - Login into  Mysql  to make sure the tables  have been created 
-    
-    - Only unique Emails are allowed 
+</p>
 
+<p>
+Architecture : 
+Users model 
+    The Standard Laravel  users model has been ammended  to  accomodate the new table structure . 
 
+The Standard laravel users migration file has also been amended to take the database changes into account.
+
+a Model-View-Controller (MVC) architectural pattern  has been  Followed,  using standard laravel blade templating  to render the  views.
+
+Model - app/Models/User.php
+View  - resources/views/user.blade.php
+Controler - app/Http/Controllers/UserController.php
+
+For more information About  MVC architecture Please  refer to laravel documents, 
+https://laravel.com/learn/getting-started-with-laravel/what-is-mvc
+
+Validation criteria
+The following validation Criteria has been introduced in the controler 
+
+    - The name has to be a valid String no longer than 255 Characters.
+    - the Email has to be a valid  Email ,  and has to be unique  and also no longer than 255 chracters. 
+    - The additional Comments has to be a valid string no longer than 255 Characters.
+</p>
 <h1><strong>Runnig Code :  <strong></h1>  
 
 
