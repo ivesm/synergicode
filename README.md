@@ -39,3 +39,12 @@ Instructions - Assesement  for Synergy Code
         - SHOW GRANTS FOR 'my_app_user'@'localhost'; ( This will Show user grants)
 
     - Once done make sure to  update the .env file  with the  created user name  and password under the #DB  Config  section
+
+
+<h1><strong>Runnig Code :  <strong></h1>  
+
+<h1><strong>Additional features :  <strong></h1>  
+
+<h1><strong>Testing :  <strong></h1>  
+
+
