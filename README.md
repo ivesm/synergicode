@@ -8,12 +8,18 @@ The Form has 3 fields name , email and additionl comments. Basic premis is that 
 
 Once the criteria has been met the data will be commited to the database and the user will be redirected to a succes page,  assuming nothing  goes wrong.  If Something goes wrong a error page will be displayed . 
 
+<strong> Assumption : </strong>  it is assumed  that  this project  will  be run in a Ubunutu Linux  Environment or any  Debian  based os 
+
+if an alternative OS  is  used  please update the   docker/php/Dockerfile to  reflect the relevant OS 
+
 </p>
 
 <h1><strong>Technical Details: <strong></h1>  
 
+
 <p>
-Database -  Mysql  is used  for the database a database called synergicode is created ,  having a table called users
+    Running the following data base chanes is only nesssary  if  running the apllication  using  php artisan serve and  you have a  local mysql runnig 
+    Database -  Mysql  is used  for the database a database called synergicode is created ,  having a table called users
     
     +-------------------+-----------------+------+-----+---------+----------------+
     | Field             | Type            | Null | Key | Default | Extra          |
@@ -51,7 +57,7 @@ Database -  Mysql  is used  for the database a database called synergicode is cr
 
     -  repeat the steps  above  for created a test database  (synergicode_test) and make sure to update the .env.tsesting file 
 
-    - also make  sure the that the phpunit.xml  file is also Correctly update 
+    - also make  sure that the phpunit.xml  file is also Correctly updated
 
         EG : 
             <env name="DB_CONNECTION" value="mysql"/>
@@ -62,6 +68,23 @@ Database -  Mysql  is used  for the database a database called synergicode is cr
      php artisan migrate
 
     - Login into  Mysql  to make sure the tables  have been created 
+</p>
+<p>
+
+Docker -  if  you  are running the application  in the  Docker  Container the  Following needs to be run 
+
+    -  git config --global --add safe.directory /var/www/html
+    - ./start.sh  
+    - navigate to http://localhost:8000  to access the Web page 
+    - if you  wish to  Stop the service  run , docker compose down 
+    - if you want to restart the Container run docker compose up 
+    
+    for more  indepth Docker Commands  you  can refer to the following 
+    https://docs.docker.com/get-started/docker_cheatsheet.pdf
+
+    
+
+
 </p>
 
 <p>
@@ -103,7 +126,7 @@ Validation criteria - The following validation Criteria has been introduced in t
         - this environment can also be configured  on you  local machine
         - once you  have navigated to http://127.0.0.1:8000  you can start testing 
     - Docker 
-    
+
     
 </p>
 
