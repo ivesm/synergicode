@@ -18,6 +18,9 @@ if an alternative OS  is  used  please update the   docker/php/Dockerfile to  re
 
 
 <p>
+    Local machine -
+    it is assumed that your local environment  has  Mysql ,  php ,  laravel and Composer installed on you  local machine 
+    
     Running the following data base chanes is only nesssary  if  running the apllication  using  php artisan serve and  you have a  local mysql runnig 
     Database -  Mysql  is used  for the database a database called synergicode is created ,  having a table called users
     
