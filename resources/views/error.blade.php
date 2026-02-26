@@ -15,11 +15,11 @@
 
                 <div class="card shadow-sm">
                     <@if(session('message'))
-                        <div class="alert alert-success">
+                        <div class="alert alert-error">
                             {{ session('message') }}
                         </div>
                     @endif
-                    <h3>Thank you! Your action was successful.</h3>
+                    <h3>An error has occured.</h3>
                     <p>
                         <a href="/">Go to User Page</a>
                     </p>   

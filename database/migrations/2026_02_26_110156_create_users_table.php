@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('additionalcomment')->unique();
+            $table->string('additionalcomment')->nullable();
             $table->timestamps();
         });
 
