@@ -5,21 +5,27 @@ Instructions - Assesement  for Synergy Code
 <p> This code base is aimed  at testing a canidates laravel skills, the Canidate is required to complete the assesment as efficiently as possible.
 </p>
 
+<h1><strong>Technical Details: <strong></h1>  
 
-- Which ever Environment you  Choose  make sure that you  have Mysql  installed
-and  make  Sure that the chosen  user  has the appropirate rights to the DB
 
-    -Instructions  for creating  the Database ( It is assumed  that you are fimilar with Mysql and have acces to a user  with appropriate user rights , Else please refur to your administrator)
+<p> 
+    Which ever Environment you  Choose  make sure that you  have Mysql  installed
+    and  make  Sure that the chosen  user  has the appropirate rights to the DB
 
-        - mysql -u root -p
-        -   CREATE DATABASE synergicode
-            CHARACTER SET utf8mb4
-            COLLATE utf8mb4_unicode_ci;
+    Instructions  for creating  the Database ( It is assumed  that you are fimilar with Mysql and have acces to a user  with appropriate user rights , else please refur to your administrator) below
+
+</p>
+
+    
+    - mysql -u root -p
+    -   CREATE DATABASE synergicode
+        CHARACTER SET utf8mb4
+        COLLATE utf8mb4_unicode_ci;
     
     - if you need to  create a unique  user for your database ,   you can run the Following commands
 
         - CREATE USER 'my_app_user'@'%' IDENTIFIED BY 'StrongPassword123!';
-        -   Production Environment
+        -  Production Environment
             
             GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, INDEX
             ON my_app_db.*
