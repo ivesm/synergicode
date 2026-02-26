@@ -64,13 +64,13 @@ Instructions - Assesement  for Synergy Code
     - Make Sure the Migrations  have bee run 
         - php artisan migrate
 
-    - Runnig  on Local  machine
+    - Runnig 
         - php artisan serve 
         - in a browser navigate to http://127.0.0.1:8000 
         - alternatively create a Docker Container 
         - or Vm  machine  with a configured Environment ( Apache / php / laravel / mysql)
         - this environment can also be configured  on you  local machine
-
+        - once you  have navigated to http://127.0.0.1:8000  you can start testing 
 
 <h1><strong>Additional features :  <strong></h1>  
 -  The only additional feature is the addition  of an Error Page
