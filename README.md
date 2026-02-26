@@ -13,7 +13,7 @@ Once the criteria has been met the data will be commited to the database and the
 <h1><strong>Technical Details: <strong></h1>  
 
 <p>
-Database:  Mysql  is used  for the database a database called synergicode is created ,  having a table called users
+Database -  Mysql  is used  for the database a database called synergicode is created ,  having a table called users
     
     +-------------------+-----------------+------+-----+---------+----------------+
     | Field             | Type            | Null | Key | Default | Extra          |
@@ -65,31 +65,33 @@ Database:  Mysql  is used  for the database a database called synergicode is cre
 </p>
 
 <p>
-Architecture : 
-Users model 
-    The Standard Laravel  users model has been ammended  to  accomodate the new table structure . 
-
-The Standard laravel users migration file has also been amended to take the database changes into account.
-
-a Model-View-Controller (MVC) architectural pattern  has been  Followed,  using standard laravel blade templating  to render the  views.
+Architecture  - a Model-View-Controller (MVC) architectural pattern  has been  Followed,  using standard laravel blade templating  to render the  views.
 
 Model - app/Models/User.php
 View  - resources/views/user.blade.php
-Controler - app/Http/Controllers/UserController.php
+Controler - app/Http/Controllers/UserController.php 
+
+Users model , The Standard Laravel  users model has been ammended  to  accomodate the new table structure . 
+
+The Standard laravel users migration file has also been amended to take the database changes into account.
 
 For more information About  MVC architecture Please  refer to laravel documents, 
 https://laravel.com/learn/getting-started-with-laravel/what-is-mvc
 
-Validation criteria
-The following validation Criteria has been introduced in the controler 
+</p>
+
+<p>
+Validation criteria - The following validation Criteria has been introduced in the controler 
 
     - The name has to be a valid String no longer than 255 Characters.
     - the Email has to be a valid  Email ,  and has to be unique  and also no longer than 255 chracters. 
     - The additional Comments has to be a valid string no longer than 255 Characters.
 </p>
+
+
 <h1><strong>Runnig Code :  <strong></h1>  
 
-
+<p>
     - Make sure that  Mysql is up and running and that the databases  have been created 
     - Make Sure the Migrations  have bee run 
         - php artisan migrate
@@ -101,10 +103,17 @@ The following validation Criteria has been introduced in the controler
         - or Vm  machine  with a configured Environment ( Apache / php / laravel / mysql)
         - this environment can also be configured  on you  local machine
         - once you  have navigated to http://127.0.0.1:8000  you can start testing 
+</p>
 
 <h1><strong>Additional features :  <strong></h1>  
--  The only additional feature is the addition  of an Error Page
- 
+<p>
+  The only additional feature is the addition  of an Error Page, this is to cater for error Messeges begin display separately  for the confirmation messages.
+
+  <strong> NOTE </strong>
+  given the nature  of the assesment I found it unnesasary to add any additional functionality. additionally I have opted to not implement any additional javascript frameworks such as react/vue or  any other CSS frame works such as tailwind
+
+  
+ <p>
 
 <h1><strong>Testing :  <strong></h1>  
 - before  you  run any tests make sure that the following command has been run 
